@@ -2,9 +2,17 @@ import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import { Layout, Typography, Space } from "antd";
 
-import { Navbar } from "./components";
+import {
+  Navbar,
+  Homepage,
+  Exchanges,
+  Cryptocurrencies,
+  CryptoDetails,
+  News,
+} from "./components";
 
 import "./App.css";
+import "antd/dist/antd.css";
 
 export default function App() {
   return (
@@ -12,8 +20,38 @@ export default function App() {
       <div className="navbar">
         <Navbar />
       </div>
-      <div className="main"></div>
-      <div className="footer"></div>
+      <div className="main">
+        <Layout>
+          <div className="routes">
+            <Switch>
+              <Route exact path="/" component={Homepage} />
+              <Route exact path="/exchanges" component={Exchanges} />
+              <Route
+                exact
+                path="/crypotocurrencies"
+                component={Cryptocurrencies}
+              />
+              <Route exact path="/crypto/:coinId" component={CryptoDetails} />
+              <Route exact path="/news" component={News} />
+            </Switch>
+          </div>
+        </Layout>
+        <div className="footer">
+          <Typography.Title
+            level={5}
+            style={{ color: "white", textAlign: "center" }}
+          >
+            <Link to="/">Krypto Inc.</Link> <br />
+            Copyright © 2021 <br />
+            All Rights Reserved.
+          </Typography.Title>
+          <Space>
+            <Link to="/">Home</Link>
+            <Link to="/exchanges">Exchanges</Link>
+            <Link to="/news">News</Link>
+          </Space>
+        </div>
+      </div>
     </div>
   );
 }
