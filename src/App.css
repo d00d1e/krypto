@@ -1,0 +1,59 @@
+:root {
+  --text-primary: #000;
+  --bgPrimary: #fff;
+  --bgSecondary: #f9f9f9;
+  --blue: #0071bd;
+  --light-blue: #e6f7ff;
+  --border: #d9d9d9;
+}
+
+/* GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  overflow: hidden;
+}
+
+a {
+  color: var(--text-primary) !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+/* NABVAR */
+.navbar {
+  flex: 0.3;
+  background-color: #acacac;
+}
+
+.nav-container {
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  background-color: #acacac;
+}
+
+.logo-container {
+  background-color: #acacac;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  margin: 0 0 0 15px;
+}
+
+.logo a {
+  color: #000;
+  text-decoration: none;
+}
