@@ -98,6 +98,11 @@ a:hover {
   width: 35px;
 }
 
+.search-crypto {
+  margin: 20px auto 30px auto;
+  width: 250px;
+}
+
 /* FOOTER */
 .footer {
   background-color: #001529;

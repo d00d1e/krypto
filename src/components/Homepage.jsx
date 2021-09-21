@@ -56,7 +56,7 @@ export default function Homepage() {
           Top 10 Cryptocurrencies
         </Typography.Title>
         <Typography.Title level={3} className="show-more">
-          <Link to="/crypotocurrencies">Show More</Link>
+          <Link to="/cryptocurrencies">Show More</Link>
         </Typography.Title>
       </div>
       <Cryptocurrencies simplified />
