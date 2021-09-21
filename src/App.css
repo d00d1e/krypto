@@ -85,6 +85,19 @@ a:hover {
   margin-top: 0px !important;
 }
 
+/* CYPTOCURRENCIES */
+.crypto-card-container {
+  min-height: 65vh !important;
+}
+
+.crypto-card {
+  min-width: 250px;
+}
+
+.crypto-card .crypo-image {
+  width: 35px;
+}
+
 /* FOOTER */
 .footer {
   background-color: #001529;
