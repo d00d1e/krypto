@@ -12,7 +12,6 @@ import {
 } from "./components";
 
 import "./App.css";
-import "antd/dist/antd.css";
 
 export default function App() {
   return (
