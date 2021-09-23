@@ -44,6 +44,7 @@ export default function Navbar() {
           className="menu-control-container"
           onClick={() => setActiveMenu(!activeMenu)}
         >
+          hello
           <MenuOutlined />
         </Button>
       </div>

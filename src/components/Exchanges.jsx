@@ -23,13 +23,12 @@ export default function Exchanges() {
       </Row>
       <Row className="exchanges-table">
         {exchangesList.map((exchange) => (
-          <Col span={24}>
+          <Col span={24} key={exchange.uuid}>
             <Collapse>
               <Collapse.Panel
-                key={exchange.id}
                 showArrow={false}
                 header={
-                  <Row key={exchange.id}>
+                  <Row>
                     <Col span={6}>
                       <Typography.Text>
                         <strong>{exchange.rank}</strong>

@@ -1,5 +1,4 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { setupListeners } from "@reduxjs/toolkit/query";
 
 import { cryptoApi } from "../services/cryptoApi";
 import { cryptoNewsApi } from "../services/cryptoNewsApi";
@@ -14,5 +13,3 @@ export default configureStore({
       .concat(cryptoApi.middleware)
       .concat(cryptoNewsApi.middleware),
 });
-
-setupListeners(configureStore.dispatch);

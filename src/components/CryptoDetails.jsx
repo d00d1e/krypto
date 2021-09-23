@@ -112,7 +112,7 @@ export default function CryptoDetails() {
         onChange={(value) => setTimeperiod(value)}
       >
         {time.map((date) => (
-          <Select.Option key={date}>{date}</Select.Option>
+          <Select.Option key={date + new Date()}>{date}</Select.Option>
         ))}
       </Select>
 
@@ -172,7 +172,7 @@ export default function CryptoDetails() {
             {cryptoDetails.name} Links
           </Typography.Title>
           {cryptoDetails.links?.map((link) => (
-            <Row className="coin-link" key={link.name}>
+            <Row className="coin-link" key={link.name + link.type}>
               <Typography.Title level={5} className="link-name">
                 {link.type}
               </Typography.Title>

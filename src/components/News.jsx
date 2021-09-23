@@ -35,8 +35,8 @@ export default function News({ simplified }) {
             }
           >
             <Select.Option value="Cryptocurency">Cryptocurrency</Select.Option>
-            {data?.data?.coins?.map((currency) => (
-              <Select.Option value={currency.name}>
+            {data?.data?.coins?.map((currency, i) => (
+              <Select.Option value={currency.name} key={i}>
                 {currency.name}
               </Select.Option>
             ))}
@@ -48,9 +48,9 @@ export default function News({ simplified }) {
           <Card hoverable className="news-card">
             <a href={news.url} target="_blank" rel="noreferrer">
               <div className="news-image-container">
-                <Typography.Text className="news-title" level={4}>
+                <Typography.Title className="news-title" level={4}>
                   {news.name}
-                </Typography.Text>
+                </Typography.Title>
                 <img
                   src={news?.image?.thumbnail?.contentUrl || altImage}
                   alt=""

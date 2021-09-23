@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overscroll-behavior: none;
 }
 
 .app {
@@ -46,7 +47,7 @@ a:hover {
   color: var(--text-secondary);
 }
 
-/* NABVAR */
+/* NAVBAR */
 .nav-container {
   flex: 0.2;
   position: fixed;
