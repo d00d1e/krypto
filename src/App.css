@@ -174,7 +174,7 @@ a:hover {
 
 .stats-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 40px;
 }
@@ -283,6 +283,35 @@ a:hover {
 .link-name {
   text-transform: capitalize;
   font-size: 1rem;
+}
+
+/* LINE CHART */
+.chart-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  color: var(--blue);
+}
+
+.chart-title {
+  color: var(--blue) !important;
+  margin-top: 20px;
+}
+
+.price-container {
+  display: flex !important;
+  gap: 20px !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+
+.price-change {
+  font-weight: 900 !important;
+}
+
+.current-price {
+  margin-top: 0px !important;
+  font-weight: 900 !important;
 }
 
 /* FOOTER */

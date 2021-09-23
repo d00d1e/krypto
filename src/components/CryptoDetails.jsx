@@ -16,12 +16,20 @@ import {
   ThunderboltOutlined,
 } from "@ant-design/icons";
 
-import { useGetCryptoDetailsQuery } from "../api/cryptoApi";
+import LineChart from "./LineChart";
+import {
+  useGetCryptoDetailsQuery,
+  useGetCryptoHistoryQuery,
+} from "../api/cryptoApi";
 
 export default function CryptoDetails() {
   const { coinId } = useParams();
-  const [timePeriod, setTimePeriod] = useState("7d");
+  const [timeperiod, setTimeperiod] = useState("7d");
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
+  const { data: coinHistory } = useGetCryptoHistoryQuery({
+    coinId,
+    timeperiod,
+  });
   const cryptoDetails = data?.data?.coin;
 
   console.log("CryptoDetails", data);
@@ -101,13 +109,19 @@ export default function CryptoDetails() {
       <Select
         defaultValue="7d"
         className="select-timeperiod"
-        placeholder="Select Time Period"
-        onChange={(value) => setTimePeriod(value)}
+        placeholder="Select Timeperiod"
+        onChange={(value) => setTimeperiod(value)}
       >
         {time.map((date) => (
           <Select.Option key={date}>{date}</Select.Option>
         ))}
       </Select>
+
+      <LineChart
+        coinHistory={coinHistory}
+        currentPrice={millify(cryptoDetails.price)}
+        coinName={cryptoDetails.name}
+      />
 
       <Col className="stats-container">
         <Col className="coin-value-statistics">
@@ -150,15 +164,15 @@ export default function CryptoDetails() {
       <Col className="coin-desc-link">
         <Row className="coin-desc">
           <Typography.Title level={3} className="coin-details-heading">
-            What is {cryptoDetails.name}
-            {HTMLReactParser(cryptoDetails.description)}
+            What is {cryptoDetails.name}?
           </Typography.Title>
+          {HTMLReactParser(cryptoDetails.description)}
         </Row>
         <Col className="coin-links">
           <Typography.Title level={3} className="coin-details-heading">
             {cryptoDetails.name} Links
           </Typography.Title>
-          {cryptoDetails.links.map((link) => (
+          {cryptoDetails.links?.map((link) => (
             <Row className="coin-link" key={link.name}>
               <Typography.Title level={5} className="link-name">
                 {link.type}
