@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import millify from "millify";
 import { Card, Row, Col, Input } from "antd";
 
-import { useGetCryptosQuery } from "../api/cryptoApi";
+import { useGetCryptosQuery } from "../services/cryptoApi";
 import Loader from "./Loader";
 
 export default function Cryptocurrencies({ simplified }) {
@@ -22,8 +22,6 @@ export default function Cryptocurrencies({ simplified }) {
   }, [cryptosList, searchTerm]);
 
   if (isFetching) return <Loader />;
-
-  console.log(cryptos);
 
   return (
     <>

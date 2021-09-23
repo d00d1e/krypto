@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import moment from "moment";
 import { Select, Typography, Row, Col, Avatar, Card } from "antd";
 
-import { useGetCryptoNewsQuery } from "../api/cryptoNewsApi";
-import { useGetCryptosQuery } from "../api/cryptoApi";
+import { useGetCryptoNewsQuery } from "../services/cryptoNewsApi";
+import { useGetCryptosQuery } from "../services/cryptoApi";
 import Loader from "./Loader";
 
 const altImage =

@@ -19,7 +19,7 @@ import {
 import {
   useGetCryptoDetailsQuery,
   useGetCryptoHistoryQuery,
-} from "../api/cryptoApi";
+} from "../services/cryptoApi";
 import LineChart from "./LineChart";
 import Loader from "./Loader";
 

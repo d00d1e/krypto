@@ -4,7 +4,7 @@ import HTMLReactParser from "html-react-parser";
 
 import { Collapse, Row, Col, Typography, Avatar } from "antd";
 
-import { useGetExchangesQuery } from "../api/cryptoApi";
+import { useGetExchangesQuery } from "../services/cryptoApi";
 import Loader from "./Loader";
 
 export default function Exchanges() {

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import millify from "millify";
 import { Typography, Row, Col, Statistic } from "antd";
 
-import { useGetCryptosQuery } from "../api/cryptoApi";
+import { useGetCryptosQuery } from "../services/cryptoApi";
 import { Cryptocurrencies, News } from "../components";
 import Loader from "./Loader";
 
@@ -39,9 +39,6 @@ export default function Homepage() {
             title="Total 24h Volume"
             value={`$${millify(globalStats.total24hVolume)}`}
           />
-        </Col>
-        <Col span={12}>
-          <Statistic title="Total Cryptocurrencies" value={globalStats.total} />
         </Col>
         <Col span={12}>
           <Statistic
