@@ -5,14 +5,13 @@ import HTMLReactParser from "html-react-parser";
 import { Collapse, Row, Col, Typography, Avatar } from "antd";
 
 import { useGetExchangesQuery } from "../api/cryptoApi";
+import Loader from "./Loader";
 
 export default function Exchanges() {
   const { data, isFetching } = useGetExchangesQuery();
   const exchangesList = data?.data?.exchanges;
 
-  console.log("exchanges", exchangesList);
-
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
 
   return (
     <>

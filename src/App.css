@@ -35,6 +35,13 @@
   padding: 20px;
 }
 
+.loader {
+  height: 81vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 a:hover {
   color: var(--text-secondary);
 }
@@ -144,7 +151,7 @@ a:hover {
   font-style: italic !important;
 }
 
-/* CRYPTODETAILS */
+/* CRYPTO DETAILS */
 .coin-detail-container {
   margin: 30px;
 }

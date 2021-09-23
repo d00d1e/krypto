@@ -36,8 +36,6 @@ export default function LineChart({ coinHistory, currentPrice, coinName }) {
     },
   };
 
-  console.log("coinhistory", coinHistory?.data?.change);
-
   return (
     <>
       <Row className="chart-heading">

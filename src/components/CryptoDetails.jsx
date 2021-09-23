@@ -16,11 +16,12 @@ import {
   ThunderboltOutlined,
 } from "@ant-design/icons";
 
-import LineChart from "./LineChart";
 import {
   useGetCryptoDetailsQuery,
   useGetCryptoHistoryQuery,
 } from "../api/cryptoApi";
+import LineChart from "./LineChart";
+import Loader from "./Loader";
 
 export default function CryptoDetails() {
   const { coinId } = useParams();
@@ -32,9 +33,7 @@ export default function CryptoDetails() {
   });
   const cryptoDetails = data?.data?.coin;
 
-  console.log("CryptoDetails", data);
-
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
 
   const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
 

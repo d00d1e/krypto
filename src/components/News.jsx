@@ -4,6 +4,7 @@ import { Select, Typography, Row, Col, Avatar, Card } from "antd";
 
 import { useGetCryptoNewsQuery } from "../api/cryptoNewsApi";
 import { useGetCryptosQuery } from "../api/cryptoApi";
+import Loader from "./Loader";
 
 const altImage =
   "https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News";
@@ -17,7 +18,7 @@ export default function News({ simplified }) {
     count: simplified ? 6 : 12,
   });
 
-  if (!cryptoNews?.value) return "Loading...";
+  if (!cryptoNews?.value) return <Loader />;
 
   return (
     <Row gutter={[24, 24]}>
