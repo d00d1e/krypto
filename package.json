@@ -1,7 +1,7 @@
 {
   "name": "react-krypto",
   "version": "0.1.0",
-  "homepage": "https://github.com/d00d1e/krypto",
+  "homepage": "http://d00d1e.github.io/krypto",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.6.4",
