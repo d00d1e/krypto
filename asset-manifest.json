@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/d00d1e/krypto/static/css/main.5936f833.chunk.css",
-    "main.js": "/d00d1e/krypto/static/js/main.334936d1.chunk.js",
-    "main.js.map": "/d00d1e/krypto/static/js/main.334936d1.chunk.js.map",
-    "runtime-main.js": "/d00d1e/krypto/static/js/runtime-main.5ddda316.js",
-    "runtime-main.js.map": "/d00d1e/krypto/static/js/runtime-main.5ddda316.js.map",
-    "static/css/2.786ae0dd.chunk.css": "/d00d1e/krypto/static/css/2.786ae0dd.chunk.css",
-    "static/js/2.9b3bd2f3.chunk.js": "/d00d1e/krypto/static/js/2.9b3bd2f3.chunk.js",
-    "static/js/2.9b3bd2f3.chunk.js.map": "/d00d1e/krypto/static/js/2.9b3bd2f3.chunk.js.map",
-    "index.html": "/d00d1e/krypto/index.html",
-    "static/css/2.786ae0dd.chunk.css.map": "/d00d1e/krypto/static/css/2.786ae0dd.chunk.css.map",
-    "static/css/main.5936f833.chunk.css.map": "/d00d1e/krypto/static/css/main.5936f833.chunk.css.map",
-    "static/js/2.9b3bd2f3.chunk.js.LICENSE.txt": "/d00d1e/krypto/static/js/2.9b3bd2f3.chunk.js.LICENSE.txt",
-    "static/media/avatar-crypto2.8034b379.png": "/d00d1e/krypto/static/media/avatar-crypto2.8034b379.png"
+    "main.css": "/krypto/static/css/main.5936f833.chunk.css",
+    "main.js": "/krypto/static/js/main.334936d1.chunk.js",
+    "main.js.map": "/krypto/static/js/main.334936d1.chunk.js.map",
+    "runtime-main.js": "/krypto/static/js/runtime-main.c64554d7.js",
+    "runtime-main.js.map": "/krypto/static/js/runtime-main.c64554d7.js.map",
+    "static/css/2.786ae0dd.chunk.css": "/krypto/static/css/2.786ae0dd.chunk.css",
+    "static/js/2.3d7af421.chunk.js": "/krypto/static/js/2.3d7af421.chunk.js",
+    "static/js/2.3d7af421.chunk.js.map": "/krypto/static/js/2.3d7af421.chunk.js.map",
+    "index.html": "/krypto/index.html",
+    "static/css/2.786ae0dd.chunk.css.map": "/krypto/static/css/2.786ae0dd.chunk.css.map",
+    "static/css/main.5936f833.chunk.css.map": "/krypto/static/css/main.5936f833.chunk.css.map",
+    "static/js/2.3d7af421.chunk.js.LICENSE.txt": "/krypto/static/js/2.3d7af421.chunk.js.LICENSE.txt",
+    "static/media/avatar-crypto2.8034b379.png": "/krypto/static/media/avatar-crypto2.8034b379.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5ddda316.js",
+    "static/js/runtime-main.c64554d7.js",
     "static/css/2.786ae0dd.chunk.css",
-    "static/js/2.9b3bd2f3.chunk.js",
+    "static/js/2.3d7af421.chunk.js",
     "static/css/main.5936f833.chunk.css",
     "static/js/main.334936d1.chunk.js"
   ]
