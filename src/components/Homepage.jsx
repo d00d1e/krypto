@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import millify from "millify";
-import { Typography, Row, Col, Statistic } from "antd";
+import { Typography, Row, Col, Statistic, Divider } from "antd";
 
 import { useGetCryptosQuery } from "../services/cryptoApi";
 import { Cryptocurrencies, News } from "../components";
@@ -47,6 +47,9 @@ export default function Homepage() {
           />
         </Col>
       </Row>
+
+      <Divider />
+
       <div className="home-heading-container">
         <Typography.Title level={2} className="home-title">
           Top 10 Cryptocurrencies
@@ -56,6 +59,8 @@ export default function Homepage() {
         </Typography.Title>
       </div>
       <Cryptocurrencies simplified />
+
+      <Divider />
 
       <div className="home-heading-container">
         <Typography.Title level={2} className="home-title">

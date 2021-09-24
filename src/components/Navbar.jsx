@@ -44,13 +44,12 @@ export default function Navbar() {
           className="menu-control-container"
           onClick={() => setActiveMenu(!activeMenu)}
         >
-          hello
           <MenuOutlined />
         </Button>
       </div>
 
       {activeMenu && (
-        <Menu theme="dark">
+        <Menu theme="dark" className="menu">
           <Menu.Item key="1" icon={<HomeOutlined />}>
             <Link to="/">Home</Link>
           </Menu.Item>

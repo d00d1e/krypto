@@ -3,7 +3,7 @@ import HTMLReactParser from "html-react-parser";
 import { useParams } from "react-router-dom";
 import millify from "millify";
 
-import { Col, Row, Typography, Select } from "antd";
+import { Col, Row, Typography, Select, Divider } from "antd";
 import {
   MoneyCollectOutlined,
   DollarCircleOutlined,
@@ -103,6 +103,7 @@ export default function CryptoDetails() {
           {cryptoDetails.name} live price in US dollars. View value statistics,
           market cap and supply.
         </p>
+        <Divider />
       </Col>
 
       <Select
@@ -111,8 +112,8 @@ export default function CryptoDetails() {
         placeholder="Select Timeperiod"
         onChange={(value) => setTimeperiod(value)}
       >
-        {time.map((date) => (
-          <Select.Option key={date + new Date()}>{date}</Select.Option>
+        {time.map((date, i) => (
+          <Select.Option key={date + i}>{date}</Select.Option>
         ))}
       </Select>
 
@@ -121,6 +122,8 @@ export default function CryptoDetails() {
         currentPrice={millify(cryptoDetails.price)}
         coinName={cryptoDetails.name}
       />
+
+      <Divider />
 
       <Col className="stats-container">
         <Col className="coin-value-statistics">
@@ -131,7 +134,7 @@ export default function CryptoDetails() {
             <p>Stat Overview of {cryptoDetails.name}</p>
           </Col>
           {stats.map(({ icon, title, value }) => (
-            <Col className="coin-stats">
+            <Col className="coin-stats" key={title}>
               <Col className="coin-stats-name">
                 <Typography.Text>{icon}</Typography.Text>
                 <Typography.Text>{title}</Typography.Text>
@@ -149,7 +152,7 @@ export default function CryptoDetails() {
             <p>Stat Overview of all cryptocurrencies</p>
           </Col>
           {genericStats.map(({ icon, title, value }) => (
-            <Col className="coin-stats">
+            <Col className="coin-stats" key={title}>
               <Col className="coin-stats-name">
                 <Typography.Text>{icon}</Typography.Text>
                 <Typography.Text>{title}</Typography.Text>
@@ -159,6 +162,8 @@ export default function CryptoDetails() {
           ))}
         </Col>
       </Col>
+
+      <Divider />
 
       <Col className="coin-desc-link">
         <Row className="coin-desc">

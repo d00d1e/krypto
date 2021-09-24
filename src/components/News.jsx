@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import moment from "moment";
-import { Select, Typography, Row, Col, Avatar, Card } from "antd";
+import { Select, Typography, Row, Col, Avatar, Card, Divider } from "antd";
 
 import { useGetCryptoNewsQuery } from "../services/cryptoNewsApi";
 import { useGetCryptosQuery } from "../services/cryptoApi";
@@ -34,7 +34,7 @@ export default function News({ simplified }) {
               option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
             }
           >
-            <Select.Option value="Cryptocurency">Cryptocurrency</Select.Option>
+            <Select.Option value="Cryptocurrency">All Cryptos</Select.Option>
             {data?.data?.coins?.map((currency, i) => (
               <Select.Option value={currency.name} key={i}>
                 {currency.name}
@@ -61,6 +61,7 @@ export default function News({ simplified }) {
                   ? `${news.description.substring(0, 100)}...`
                   : news.description}
               </p>
+              <Divider />
               <div className="provider-container">
                 <div>
                   <Avatar
@@ -73,7 +74,7 @@ export default function News({ simplified }) {
                     {news.provider[0]?.name}
                   </Typography.Text>
                 </div>
-                <Typography.Text>
+                <Typography.Text className="provider-date">
                   {moment(news.datePublished).startOf("ss").fromNow()}
                 </Typography.Text>
               </div>

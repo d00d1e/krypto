@@ -35,21 +35,28 @@ export default function App() {
             </Switch>
           </div>
         </Layout>
-        <div className="footer">
-          <Typography.Title
-            level={5}
-            style={{ color: "white", textAlign: "center" }}
-          >
-            <Link to="/">Krypto Inc.</Link> <br />
-            Copyright © 2021 <br />
-            All Rights Reserved.
-          </Typography.Title>
-          <Space>
-            <Link to="/">Home</Link>
-            <Link to="/exchanges">Exchanges</Link>
-            <Link to="/news">News</Link>
-          </Space>
-        </div>
+      </div>
+      <div className="footer">
+        <Typography.Title
+          level={4}
+          style={{ color: "white", textAlign: "center" }}
+        >
+          <Link to="/" className="footer-logo">
+            Krypto
+          </Link>
+        </Typography.Title>
+        <Typography.Text
+          level={5}
+          style={{ color: "gray", textAlign: "center" }}
+        >
+          Copyright © 2021
+          <br />
+          All Rights Reserved.
+        </Typography.Text>
+        <Space>
+          <Link to="/">Home</Link> | <Link to="/exchanges">Exchanges</Link> |
+          <Link to="/news">News</Link>
+        </Space>
       </div>
     </div>
   );

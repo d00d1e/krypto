@@ -20,8 +20,8 @@ export default function LineChart({ coinHistory, currentPrice, coinName }) {
         label: "Price in USD",
         data: coinPrice,
         fill: false,
-        backgroundColor: "#0071bd",
-        borderColor: "#0071bd",
+        backgroundColor: "#1890ff",
+        borderColor: "#1890ff",
       },
     ],
   };
