@@ -8,7 +8,7 @@ import App from "./App";
 import "antd/dist/antd.css";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/krypto">
     <Provider store={store}>
       <App />
     </Provider>

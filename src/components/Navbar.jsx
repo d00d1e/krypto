@@ -9,7 +9,7 @@ import {
   MenuOutlined,
 } from "@ant-design/icons";
 
-import icon from "../images/avatar-crypto2.png";
+import icon from "../images/crypto-logo.png";
 
 export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState(true);
