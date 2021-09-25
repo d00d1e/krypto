@@ -52,8 +52,9 @@ export default function News({ simplified }) {
                   {news.name}
                 </Typography.Title>
                 <img
+                  className="news-image"
                   src={news?.image?.thumbnail?.contentUrl || altImage}
-                  alt=""
+                  alt={news.name}
                 />
               </div>
               <p>
