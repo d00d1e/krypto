@@ -67,7 +67,7 @@ export default function Homepage() {
           Latest Crypto News
         </Typography.Title>
         <Typography.Title level={3} className="show-more">
-          <Link to="/news">Read More</Link>
+          <Link to="/news">More News</Link>
         </Typography.Title>
       </div>
       <News simplified />
